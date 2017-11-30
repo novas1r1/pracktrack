@@ -9,4 +9,7 @@
     <string name="overview_projects">Projects</string>
     <string name="overview_exercises">Exercises</string>
     <string name="overview_skills">Skills</string>
+    <string name="skill_tab_entries">Entries</string>
+    <string name="skill_tab_history">History</string>
+    <string name="skill_tab_overview">Overview</string>
 </resources>

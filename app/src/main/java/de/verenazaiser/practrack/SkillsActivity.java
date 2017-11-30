@@ -1,39 +1,30 @@
 package de.verenazaiser.practrack;
 
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import de.verenazaiser.practrack.adapters.HomeTabAdapter;
-import de.verenazaiser.practrack.fragments.DashboardFragment;
-import de.verenazaiser.practrack.fragments.EntriesFragment;
-import de.verenazaiser.practrack.fragments.OverviewFragment;
+import de.verenazaiser.practrack.adapters.SkillTabAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class SkillsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_skills);
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        HomeTabAdapter homeTabAdapter = new HomeTabAdapter(getSupportFragmentManager(), this);
+        SkillTabAdapter tabAdapter = new SkillTabAdapter(getSupportFragmentManager(), this);
 
         ViewPager mViewPager = findViewById(R.id.viewpager);
-        mViewPager.setAdapter(homeTabAdapter);
+        mViewPager.setAdapter(tabAdapter);
         mViewPager.setOffscreenPageLimit(0);
 
         TabLayout tabLayout = findViewById(R.id.tabs);
