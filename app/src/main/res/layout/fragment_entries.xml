@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <ListView
+        android:id="@+id/lv_entries"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/home_tab_entries"/>
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>
